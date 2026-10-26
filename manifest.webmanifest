@@ -1,0 +1,18 @@
+{
+  "name": "Simón Central — Catálogo",
+  "short_name": "Simón Central",
+  "description": "Catálogo digital de Simón va con vos",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#33211e",
+  "theme_color": "#33211e",
+  "icons": [
+    {
+      "src": "/logo-simon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
