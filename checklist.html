@@ -1,0 +1,99 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checklist · Pochoclos | Simón Central</title><link rel="icon" href="/logo-simon.png"><style>*{box-sizing:border-box}body{margin:0;background:#faf8f8;color:#36383e;font-family:system-ui,-apple-system,Segoe UI,sans-serif}header{height:84px;background:white;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,20px)}.brand{display:flex;align-items:center;gap:12px}.brand strong{display:block;font-size:23px;letter-spacing:2px}.brand small{font-size:10px;letter-spacing:2px;color:#9d687d}.seal{display:grid;place-items:center;border-radius:50%;height:48px;width:48px;background:#d99ab2;color:white;font-family:Georgia,serif;font-size:30px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:#bb7893}.login{max-width:550px;margin:10vh auto 12vh;text-align:center;padding:0 20px}.login-icon{color:#cf90a8;font-size:48px}.login h1,.intro h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.12;margin:18px 0}.login em{color:#b87994}.login>p:not(.eyebrow),.intro>p:last-child{color:#777}form{background:white;text-align:left;border:1px solid #eee;padding:26px;border-radius:18px;box-shadow:0 12px 40px #3333330a;margin-top:30px}label{font-size:13px;font-weight:700;display:block;margin-bottom:9px}input{width:100%;border:1px solid #ddd;border-radius:9px;padding:15px;font-size:16px;background:white}input:focus{outline:2px solid #dca9bd;border-color:#dca9bd}button{cursor:pointer;border:0}form button{background:#34363d;color:white;border-radius:9px;width:100%;padding:15px;font-size:15px;margin-top:16px;font-weight:700}#error{color:#b32642;min-height:20px;font-size:13px}#salir{background:#f7e8ee;color:#653c4e;border-radius:8px;padding:10px 17px}#app{max-width:1080px;margin:auto;padding:55px 22px}.intro h1{margin:8px 0}.tools{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:35px 0 18px}.tools input{max-width:340px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:10px 14px;border-radius:25px;background:#fff;border:1px solid #eadce2;color:#694e59}.chip.active{background:#34363d;color:white;border-color:#34363d}#contador{color:#888;font-size:13px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}.recipe{background:#fff;border:1px solid #eee;border-radius:15px;padding:25px;text-align:left;box-shadow:0 4px 18px #33333308;min-height:195px}.recipe:hover{border-color:#d7a1b7;transform:translateY(-2px)}.recipe .tag{font-size:11px;color:#ad6884;font-weight:700;letter-spacing:1px}.recipe h2{font-family:Georgia,serif;font-size:24px;font-weight:400}.recipe .bottom{color:#777;font-size:13px}.modal{position:fixed;inset:0;background:#2229;display:flex;align-items:center;justify-content:center;padding:16px;z-index:3}.modal[hidden], [hidden]{display:none!important}.modal-card{background:white;border-radius:16px;padding:30px;max-width:630px;width:100%;max-height:90vh;overflow:auto;position:relative}.close{position:absolute;right:16px;top:16px;background:#f6edf1;border-radius:50%;width:35px;height:35px}.modal-card h2{font:normal 34px Georgia,serif}.modal-card h3{margin-top:28px}.modal-card li{margin:9px 0;line-height:1.5}.note{background:#fff3e5;padding:12px;border-radius:9px;color:#755832;font-size:13px}footer{text-align:center;padding:28px;color:#aaa;font-size:12px}@media(max-width:600px){header{height:72px}.login{margin-top:7vh}.tools input{max-width:none}.modal-card{padding:24px}}
+.recipe{padding:0;overflow:hidden}.recipe>.tag,.recipe>h2,.recipe>.bottom{display:block;margin-left:22px;margin-right:22px}.recipe>.tag{margin-top:19px}.recipe>.bottom{margin-bottom:24px}.recipe-photo,.photo-placeholder{display:block;width:100%;height:165px;object-fit:cover}.photo-placeholder{background:linear-gradient(135deg,#f4dfe7,#f8f2f4);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#ae7890;gap:7px}.photo-placeholder span{font-family:Georgia,serif;font-size:30px;letter-spacing:3px}.photo-placeholder small{font-size:12px}.detail-photo{width:100%;max-height:300px;object-fit:cover;border-radius:12px;margin-top:16px}.modal-card video{width:100%;border-radius:12px;background:#222}
+
+.section-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}.section-nav button{padding:14px 20px;background:white;border:1px solid #eadce2;border-radius:12px;font-weight:700;color:#5a4d53}.section-nav button.selected{background:#34363d;color:white;border-color:#34363d}#buscar-manual{max-width:390px;margin:20px 0}.recipe p{font-size:14px;line-height:1.5;color:#666}#manual-lista{margin-top:12px}
+
+/* Logo oficial Simón V8 */
+.brand-logo{width:58px;height:58px;object-fit:contain;flex-shrink:0}.login-logo{display:block;width:136px;height:136px;object-fit:contain;margin:0 auto 16px}.brand small{letter-spacing:1.5px}@media(max-width:600px){.brand-logo{width:48px;height:48px}.brand strong{font-size:19px}.brand small{font-size:9px}.login-logo{width:116px;height:116px}}
+
+/* V11 - temporizadores flotantes */
+.recipe-timer{background:#fbf0f4;border:1px solid #ecd4de;border-radius:12px;padding:16px;margin-top:24px}.recipe-timer h3{margin:0 0 8px}.recipe-timer p{font-size:13px;color:#67535c}.timer-start{display:flex;align-items:end;gap:10px;flex-wrap:wrap}.timer-start label{margin:0}.timer-start input{width:90px;padding:10px}.timer-start button,.timer-buttons button{border-radius:8px;background:#39373e;color:#fff;padding:10px 12px;font-weight:600}.timer-panel{position:fixed;bottom:16px;right:16px;z-index:8;width:min(330px,calc(100vw - 32px));max-height:min(70vh,600px);overflow:auto;background:white;border:1px solid #dfb5c5;border-radius:15px;box-shadow:0 12px 40px #0003;padding:13px}.timer-panel[hidden]{display:none}.timer-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.timer-heading button{border-radius:7px;padding:6px 12px;background:#f6e8ee;font-size:18px}.timer-items{margin-top:8px}.timer-item{padding:11px 2px;border-top:1px solid #eee}.timer-item strong{font-size:13px}.timer-clock{font-size:24px;font-weight:750;font-variant-numeric:tabular-nums;margin:5px 0}.timer-buttons{display:flex;gap:5px;flex-wrap:wrap}.timer-buttons button{font-size:11px;padding:8px}.timer-done{background:#fff1df;border-radius:8px;padding:10px}.timer-done .timer-clock{font-size:16px;color:#a23b25}.timer-small{font-size:12px;color:#67535c}.timer-collapsed{width:210px}@media(max-width:600px){.timer-panel{bottom:10px;right:10px;width:min(300px,calc(100vw - 20px));max-height:55vh}}
+
+.recipe-timer>button{background:#39373e;color:white;border:0;border-radius:9px;padding:12px 16px;font-weight:700;cursor:pointer}.recipe-timer>button:active{transform:scale(.98)}
+
+/* V13: panel visible por encima del resto del recetario y control de emergencia */
+#timer-panel.timer-panel{position:fixed!important;z-index:2147483000!important;bottom:12px!important;right:12px!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;max-height:75dvh;overflow-y:auto}#timer-panel.timer-panel[hidden]{display:none!important}.timer-silence-all{display:block;width:100%;background:#a42c36;color:white;border:0;border-radius:10px;padding:15px 10px;margin-top:10px;font-weight:800;font-size:15px;cursor:pointer}.timer-panel .timer-buttons button{cursor:pointer}
+
+/* V17: mostrar vasos y copas completos en las fotografías de bebidas */
+.recipe:has(img[src*="/fotos/"]){}
+.recipe-photo{object-position:center}
+.recipe:has(.recipe-photo){}
+
+.recipe-drink .recipe-photo{height:190px;object-fit:contain;background:#faf8f9;padding:8px;box-sizing:border-box}
+.detail-photo.detail-drink{height:340px;max-height:55vh;object-fit:contain;background:#faf8f9}
+/* V19: checklist al finalizar cada turno */
+.checklist-box{margin:32px auto;padding:22px;max-width:900px;background:#fff;border:1px solid #e8cdd6;border-radius:18px;color:#333;box-shadow:0 4px 20px #0001}
+.checklist-box h2,.checklist-box h3{margin:8px 0 12px}.checklist-box label{display:block}.checklist-box input:not([type=radio]),.checklist-box select,.checklist-box textarea{box-sizing:border-box;display:block;width:100%;padding:11px;margin:6px 0 12px;border:1px solid #bdbdbd;border-radius:9px;font:inherit;background:white;color:#252525}.checklist-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.checklist-group{margin:18px 0;padding:14px;border:1px solid #e5e5e5;border-radius:12px}.checklist-line{padding:12px 0;border-top:1px solid #eee}.checklist-choices{display:flex;flex-wrap:wrap;gap:10px 16px;margin:10px 0}.checklist-choices label{display:flex;align-items:center;gap:5px;font-size:.9rem}.checklist-choices input{accent-color:#a74369}.checklist-free{margin:16px 0}.checklist-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.checklist-actions button{background:#a74369;color:white;border:0;border-radius:9px;padding:12px 16px;font-weight:bold;cursor:pointer}.checklist-actions .checklist-secondary{background:#555}.checklist-error{color:#a71933;font-weight:700}.checklist-preview{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f4f5;padding:16px;border-radius:10px;max-height:400px;overflow:auto}.checklist-disclaimer{font-size:.85rem;color:#666}@media(max-width:600px){.checklist-box{padding:14px}.checklist-fields{grid-template-columns:1fr}.checklist-choices{gap:12px}}
+
+/* V21: panel accesible únicamente al abrir el checklist */
+#turno-checklist[hidden],#manual-lista[hidden],#buscar-manual[hidden]{display:none!important}
+.checklist-back{display:block;background:#a74369;color:white;border:0;border-radius:10px;padding:12px 18px;margin-bottom:16px;cursor:pointer;font:inherit;font-weight:600}
+
+#volver-checklist[hidden]{display:none!important}
+
+/* V23: entrada visible al checklist */
+.checklist-entry{margin:20px 0}.checklist-open{display:flex;flex-direction:column;gap:9px;width:100%;text-align:left;background:#fff7fa;border:2px solid #d9a6bb;border-radius:14px;padding:20px;color:#333;cursor:pointer}.checklist-open strong{font-size:1.2rem}.checklist-open .bottom{color:#9d4267;font-weight:700}.checklist-box[hidden]{display:none!important}
+
+body{background:#faf8f7}main{max-width:920px;margin:25px auto;padding:0 16px}.checklist-box{display:block!important}header{padding:20px;text-align:center;background:#454047;color:white}header img{width:68px;vertical-align:middle;margin-right:12px}header a{color:#fff}#turno-checklist{margin:15px auto}</style></head><body><header><img src="/logo-simon.png" alt="Simón"><strong>SIMÓN CENTRAL · LOCAL DE POCHOCLOS</strong><p><a href="/">← Volver al catálogo</a></p></header><main><section id="turno-checklist" class="checklist-box"></section></main><script>// V19 — Control de finalización de turno. No altera recetas ni temporizadores.
+(function(){
+const groups=[
+ {title:'Reposición y control',items:['Bebidas','Sándwiches','Ensaladas de frutas','Pochoclos','Garrapiñadas','Frutas','Orden de heladeras','Revisión de etiquetas y vencimientos','Revisión de temperatura de equipos de frío (sin ingresar grados)','Rotación de mercadería por vencimiento','Vasos, tapas y servilletas']},
+ {title:'Limpieza',items:['Mostrador','Bacha','Licuadora','Piso de cocina','Exhibidoras','Debajo de exhibidoras','Vidrios','Sobre exhibidoras','Cestos de residuos','Olla pochoclera']},
+ {title:'Equipos y cierre',items:['Apagado de luces interiores']}
+];
+const key='simon-central-pochoclos-checklist-v1';let draft={};try{draft=JSON.parse(sessionStorage.getItem(key)||'{}')||{}}catch{}
+const root=document.getElementById('turno-checklist');if(!root)return;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const field=(name)=>esc(draft[name]||'');
+function store(){try{sessionStorage.setItem(key,JSON.stringify(draft))}catch{}}
+function render(){
+ root.innerHTML=`<div class="checklist-head"><p class="eyebrow">CONTROL DEL LOCAL</p><h2>Checklist · Local de Pochoclos</h2><p>Registrá cómo dejás el local. Al terminar, prepará el informe para compartirlo en el grupo de WhatsApp.</p></div>
+ <div class="checklist-fields"><label>Empleado responsable <input data-field="empleado" maxlength="100" required value="${field('empleado')}" placeholder="Nombre y apellido"></label><label>Turno <select data-field="turno"><option value="">Seleccionar turno</option>${['Mañana','Tarde','Noche'].map(x=>`<option ${draft.turno===x?'selected':''}>${x}</option>`).join('')}</select></label></div>
+ <label class="checklist-free"><strong>1. Producción del turno</strong><textarea data-field="produccion" rows="3" placeholder="Qué se produjo y cantidades">${field('produccion')}</textarea></label>
+ ${groups.map((g,gi)=>`<section class="checklist-group"><h3>${gi+2}. ${esc(g.title)}</h3>${g.items.map((item,i)=>{const id=`${gi}-${i}`,value=draft['status-'+id]||'';return `<div class="checklist-line"><strong>${esc(item)}</strong><div class="checklist-choices">${[['ok','Correcto'],['issue','Con problema'],['pending','Pendiente'],['na','No corresponde']].map(([v,label])=>`<label><input type="radio" name="control-${id}" data-status="${id}" value="${v}" ${value===v?'checked':''}> ${label}</label>`).join('')}</div>${value==='issue'?`<label class="checklist-obs">Observación obligatoria <input data-field="obs-${id}" value="${field('obs-'+id)}" placeholder="Describir el problema"></label>`:''}</div>`}).join('')}</section>`).join('')}
+ <label class="checklist-free"><strong>Faltantes</strong><textarea data-field="faltantes" rows="3" placeholder="Productos faltantes y cantidades; escribir Sin faltantes si corresponde">${field('faltantes')}</textarea></label>
+ <label class="checklist-free"><strong>Ingreso de mercadería</strong><textarea data-field="ingresos" rows="3" placeholder="Productos recibidos y cantidades; escribir Sin ingresos si corresponde">${field('ingresos')}</textarea></label>
+ <p id="checklist-error" class="checklist-error" role="alert"></p><div class="checklist-actions"><button type="button" id="checklist-generate">Preparar informe</button><button type="button" id="checklist-clear" class="checklist-secondary">Nuevo control</button></div><div id="checklist-report" hidden></div><p class="checklist-disclaimer">Este formulario guarda un borrador solo en esta pestaña. El informe no se envía ni se guarda en un servidor: el empleado elige el grupo y confirma el envío en WhatsApp.</p>`;
+ root.querySelectorAll('[data-field]').forEach(el=>el.addEventListener('input',()=>{draft[el.dataset.field]=el.value;store()}));
+ root.querySelectorAll('[data-status]').forEach(el=>el.addEventListener('change',()=>{draft['status-'+el.dataset.status]=el.value;store();const focused=el.dataset.status;render();const target=root.querySelector(`[name="${focused==='filtrado'?'filtrado':'control-'+focused}"][value="${el.value}"]`);target?.focus()}));
+ root.querySelector('#checklist-generate').addEventListener('click',generate);
+ root.querySelector('#checklist-clear').addEventListener('click',()=>{if(!confirm('¿Empezar un control nuevo? Se borrará el borrador actual de esta pestaña.'))return;draft={};store();render()});
+}
+function generate(){const err=root.querySelector('#checklist-error');err.textContent='';if(!String(draft.empleado||'').trim()||!draft.turno){err.textContent='Indicá el nombre del empleado y el turno.';return}
+ const missing=[],problems=[],ok=[],pending=[],na=[];
+ for(let gi=0;gi<groups.length;gi++)for(let i=0;i<groups[gi].items.length;i++){const id=`${gi}-${i}`,label=groups[gi].items[i],status=draft['status-'+id],note=String(draft['obs-'+id]||'').trim();if(!status)missing.push(label);else if(status==='issue'){if(!note)missing.push('Observación de '+label);else problems.push(label+': '+note)}else if(status==='ok')ok.push(label);else if(status==='pending')pending.push(label);else na.push(label)}
+if(missing.length){err.textContent='Falta completar: '+missing.slice(0,5).join(', ')+(missing.length>5?' y '+(missing.length-5)+' más':'')+'. Podés marcar No corresponde cuando corresponda.';return}
+
+ const lines=[`SIMÓN CENTRAL — POCHOCLOS · CIERRE DE TURNO`,`Fecha: ${new Intl.DateTimeFormat('es-AR',{dateStyle:'short',timeStyle:'short',timeZone:'America/Argentina/Mendoza'}).format(new Date())}`,`Responsable: ${draft.empleado.trim()}`,`Turno: ${draft.turno}`,'',`⚠ PROBLEMAS (${problems.length})`,...(problems.length?problems.map(x=>'• '+x):['Sin problemas informados']),'',`FALTANTES`,String(draft.faltantes||'Sin datos informados').trim()||'Sin datos informados','',`INGRESOS DE MERCADERÍA`,String(draft.ingresos||'Sin datos informados').trim()||'Sin datos informados','',`PRODUCCIÓN DEL TURNO`,String(draft.produccion||'Sin datos informados').trim()||'Sin datos informados','',`PENDIENTES (${pending.length})`,...(pending.length?pending.map(x=>'• '+x):['Ninguno']),'',`VERIFICACIONES CORRECTAS (${ok.length})`,...ok.map(x=>'✓ '+x),'',`NO CORRESPONDE (${na.length})`,...na.map(x=>'– '+x)];const report=lines.join('\n');const panel=root.querySelector('#checklist-report');panel.hidden=false;panel.innerHTML=`<h3>Informe listo para compartir</h3><pre class="checklist-preview"></pre><div class="checklist-actions"><button id="checklist-copy" type="button">Copiar informe</button><button id="checklist-share" type="button">Compartir por WhatsApp</button></div>`;panel.querySelector('pre').textContent=report;panel.querySelector('#checklist-copy').onclick=async()=>{try{await navigator.clipboard.writeText(report);err.textContent='Informe copiado.'}catch{err.textContent='Seleccioná y copiá el informe manualmente.'}};panel.querySelector('#checklist-share').onclick=()=>window.open('https://wa.me/?text='+encodeURIComponent(report),'_blank','noopener,noreferrer');panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+render();
+})();
+
+// V23: navegación unificada, sin handlers antiguos ni dependencias del listado.
+(function(){
+ const tab=document.getElementById('tab-checklist');
+ const panel=document.getElementById('turno-checklist');
+ const list=document.getElementById('manual-lista');
+ const search=document.getElementById('buscar-manual');
+ const manualTab=document.getElementById('tab-manual');
+ const recipesTab=document.getElementById('tab-recetas');
+ if(!tab||!panel||!list||!search)return;
+ function showChecklist(){
+   cambiarSeccion('manual');
+   list.hidden=true;search.hidden=true;
+   panel.hidden=false;
+   tab.classList.add('selected');manualTab.classList.remove('selected');
+   panel.scrollIntoView({block:'start'});
+ }
+ function showManual(){
+   panel.hidden=true;list.hidden=false;search.hidden=false;
+   tab.classList.remove('selected');
+ }
+ tab.addEventListener('click',showChecklist);
+ manualTab.addEventListener('click',showManual);
+ recipesTab.addEventListener('click',showManual);
+ const entry=document.getElementById('open-turno-checklist');
+ if(entry)entry.addEventListener('click',showChecklist);
+ const back=document.getElementById('close-turno-checklist');
+ if(back)back.addEventListener('click',()=>{showManual();manualTab.click()});
+})();</script></body></html>
