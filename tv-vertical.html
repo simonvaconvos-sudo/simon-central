@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#21171a"><title>Simón Central | TV Vertical</title>
+<style>
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#21171a}body{font-family:Arial,sans-serif;color:#fff;background:radial-gradient(ellipse at 50% 30%,#50343b 0%,#302125 48%,#181317 100%)}.screen{height:100vh;height:100dvh;display:flex;flex-direction:column;padding:3vh 4vw 4vh;gap:2vh}.brand{height:17%;min-height:0;display:flex;align-items:center;justify-content:center}.brand img{height:100%;width:100%;object-fit:contain}.frame{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;opacity:1;transition:opacity .35s ease}.frame img.fading{opacity:0}.status{position:absolute;bottom:3vh;left:5vw;right:5vw;text-align:center;font-size:clamp(13px,2vw,22px);color:#e6c5d1}.status:empty{display:none}
+</style></head><body><main class="screen"><header class="brand"><img src="./logo-simon.png" alt="Simón Central"></header><section class="frame" aria-label="Productos Simón"><img id="photo" alt="" hidden></section></main><div class="status" id="status" role="status"></div>
+<script>
+'use strict';
+const API='https://simon-central-api.onrender.com/api/menu';
+const DELAY=10000;
+const REFRESH=300000;
+const photo=document.getElementById('photo');
+const status=document.getElementById('status');
+let products=[],index=-1,revision=0;
+function imageUrl(p){const url=p.image_url??p.imageUrl??p.image?.url??p.photo_url;return typeof url==='string'&&/^https:\/\//i.test(url)?url:null}
+function next(){if(!products.length)return;const version=revision;let attempts=0;function tryNext(){if(version!==revision||!products.length)return;if(attempts++>=products.length){status.textContent='No se pudieron cargar las imágenes';return}index=(index+1)%products.length;const candidate=products[index];const pre=new Image();pre.onload=()=>{if(version!==revision)return;photo.src=pre.src;photo.alt=candidate.name||'Producto Simón';photo.hidden=false;status.textContent=''};pre.onerror=tryNext;pre.src=candidate.url}tryNext()}
+async function load(){try{const response=await fetch(API,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);const json=await response.json();const body=json.data??json;const updated=(Array.isArray(body.products)?body.products:[]).map(p=>({...p,url:imageUrl(p)})).filter(p=>p.url);if(!updated.length){if(!products.length)status.textContent='Esperando imágenes de productos';return}const previous=products[index]?.url;products=updated;index=previous?products.findIndex(p=>p.url===previous):-1;if(index<0){revision++;next()}}catch(err){if(!products.length)status.textContent='No se pudo conectar con RESTOLIA. Reintentando…';console.warn('Simón TV Vertical:',err)}}
+load();setInterval(next,DELAY);setInterval(load,REFRESH);
+</script></body></html>
