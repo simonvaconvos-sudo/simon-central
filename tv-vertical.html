@@ -1,21 +1,10 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#21171a"><title>Simón Central | TV Vertical</title>
 <style>
-*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#21171a}
-body{font-family:Arial,sans-serif;color:#fff}
-/* El navegador sigue horizontal: se dibuja una página 9:16 girada en un lienzo 16:9. */
-.screen{position:fixed;left:0;top:0;width:100vh;height:100vw;transform-origin:top left;transform:translateX(100vw) rotate(90deg);display:flex;flex-direction:column;padding:3% 4% 4%;gap:2%;background:radial-gradient(ellipse at 50% 30%,#50343b 0%,#302125 48%,#181317 100%)}
-/* Si el televisor se gira en sentido contrario, abrir ?giro=izquierda */
-body.giro-izquierda .screen{transform:translateY(100vh) rotate(-90deg)}
-.brand{height:17%;min-height:0;display:flex;align-items:center;justify-content:center}
-.brand img{height:100%;width:100%;object-fit:contain}
-.frame{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
-.status{position:fixed;bottom:2%;left:3%;right:3%;text-align:center;font-size:18px;color:#e6c5d1}.status:empty{display:none}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#21171a}body{font-family:Arial,sans-serif;color:#fff;background:radial-gradient(ellipse at 50% 30%,#50343b 0%,#302125 48%,#181317 100%)}.screen{height:100vh;height:100dvh;display:flex;flex-direction:column;padding:3vh 4vw 4vh;gap:2vh}.brand{height:17%;min-height:0;display:flex;align-items:center;justify-content:center}.brand img{height:100%;width:100%;object-fit:contain}.frame{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;opacity:1;transition:opacity .35s ease}.frame img.fading{opacity:0}.status{position:absolute;bottom:3vh;left:5vw;right:5vw;text-align:center;font-size:clamp(13px,2vw,22px);color:#e6c5d1}.status:empty{display:none}
 </style></head><body><main class="screen"><header class="brand"><img src="./logo-simon.png" alt="Simón Central"></header><section class="frame" aria-label="Productos Simón"><img id="photo" alt="" hidden></section></main><div class="status" id="status" role="status"></div>
 <script>
 'use strict';
-if(new URLSearchParams(location.search).get('giro')==='izquierda')document.body.classList.add('giro-izquierda');
 const API='https://simon-central-api.onrender.com/api/menu';
 const DELAY=10000;
 const REFRESH=300000;
