@@ -1,5 +1,6 @@
 'use strict';
 const http = require('node:http');
+const { handleChecklist } = require('./checklist-access');
 const UPSTREAM = 'https://vertex.lambdaclass.com/api/v1/public/venues/simonvaconvos/menu';
 const PORT = Number(process.env.PORT || 10000);
 const ALLOWED_ORIGINS = new Set(['https://simon-central.onrender.com', 'https://www.simonvaconvos.com.ar', 'https://simonvaconvos.com.ar']);
@@ -13,6 +14,7 @@ const send = (req, res, code, body, extra = {}) => {
 };
 http.createServer(async (req, res) => {
   const path = new URL(req.url, 'http://localhost').pathname;
+  if (path === '/checklist' || path === '/checklist/logout') return handleChecklist(req, res, path);
   if (path === '/health') return send(req, res, 200, { ok: true, cached: !!cache });
   if (path !== '/api/menu') return send(req, res, 404, { error: 'Not found' });
   if (req.method !== 'GET') return send(req, res, 405, { error: 'Method not allowed' });
