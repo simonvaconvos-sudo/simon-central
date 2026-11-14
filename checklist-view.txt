@@ -37,7 +37,7 @@
 body{background:#faf8f7}main{max-width:920px;margin:25px auto;padding:0 16px}.checklist-box{display:block!important}header{padding:20px;text-align:center;background:#454047;color:white}header img{width:68px;vertical-align:middle;margin-right:12px}header a{color:#fff}#turno-checklist{margin:15px auto}</style></head><body><header><img src="https://simon-central.onrender.com/logo-simon.png" alt="Simón"><strong>SIMÓN CENTRAL · LOCAL DE POCHOCLOS</strong><p><a href="https://simon-central.onrender.com/">← Volver al catálogo</a></p></header><main><form action="/checklist/logout" method="post"><button type="submit" class="checklist-back">Cerrar acceso al checklist</button></form><section id="turno-checklist" class="checklist-box"></section></main><script>// V19 — Control de finalización de turno. No altera recetas ni temporizadores.
 (function(){
 const groups=[
- {title:'Reposición y control',items:['Bebidas','Sándwiches','Ensaladas de frutas','Pochoclos','Garrapiñadas','Frutas','Orden de heladeras','Revisión de etiquetas y vencimientos','Revisión de temperatura de equipos de frío (sin ingresar grados)','Rotación de mercadería por vencimiento','Vasos, tapas y servilletas']},
+ {title:'Reposición y control',items:['Bebidas','Sándwiches','Ensaladas de frutas','Pochoclos','Garrapiñadas','Frutas','Orden de heladeras','Revisión de etiquetas y vencimientos','Revisión de temperatura de equipos de frío','Rotación de mercadería por vencimiento','Vasos, tapas y servilletas']},
  {title:'Limpieza',items:['Mostrador','Bacha','Licuadora','Piso de cocina','Exhibidoras','Debajo de exhibidoras','Vidrios','Sobre exhibidoras','Cestos de residuos','Olla pochoclera','Limpieza de estantería de pochoclos']},
  {title:'Equipos y cierre',items:['Apagado de luces interiores']}
 ];
